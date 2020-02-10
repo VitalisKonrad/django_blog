@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
+    'taggit',
 ]
 
 MIDDLEWARE = [
@@ -102,12 +103,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'vetalboy94@gmail.com'
-EMAIL_HOST_PASSWORD = 'Konrad1994'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
@@ -127,3 +123,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'vetalboy94@gmail.com'
+EMAIL_HOST_PASSWORD = 'Konrad1994'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
