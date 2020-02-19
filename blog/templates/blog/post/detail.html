@@ -55,12 +55,13 @@
 
 
 {% extends "blog/base.html" %}
+{% loadblog_tags %}
 {% block title %}{{ post.title }}{% endblock %}
 {% block content %}
     <h1>{{ post.title}}
         Published {{ post.publish }} by {{ post.author }}
     </h1>
-    {{ post.body|linebreaks }}
+    {{ post.body|markdown }}
     <p>
         <a href="{% url "blog:post_share" post.id %}">Поделиться статьёй</a>
     </p>
