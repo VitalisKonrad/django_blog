@@ -1,5 +1,5 @@
 {% extends "blog/base.html" %}
-{% loadblog_tags %}
+{% load blog_tags %}
 {% block title %}My Blog{% endblock %}
 
 {% block content %}
@@ -26,7 +26,8 @@
       Published {{ post.publish }} by {{ post.author }}
     </p>
 {#    {{ post.body|truncatewords:30|linebreaks }}#}
-      {{ post.body|markdown|truncatewords_html:30 }} #Обрезает строку по количеству символов
+{#      #Обрезает строку по количеству символов#}
+      {{ post.body|markdown|truncatewords_html:30 }}
   {% endfor %}
   {% include "pagination.html" with page=posts %}
 {% endblock %}
