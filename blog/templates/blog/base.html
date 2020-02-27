@@ -27,6 +27,7 @@
 {#        <p>Это мой блог. Опубликовано {% total_posts %} статей</p>#}
         <h3>Последние статьи</h3>
         {% show_latest_posts %}
+        <p><a href="{% url "blog:post_feed" %}"> Подпишись на нашу новостную ленту RSS</a> </p>
     </div>
 </body>
 </html>
